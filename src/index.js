@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Pai from './componentes/Pai';
+import Filho from './componentes/Filho';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+    <div>
+        <Pai nome="João" sobrenome="Silva">
+            <Filho nome="Pedro" sobrenome="Silva" />
+            <Filho nome="Paulo" sobrenome="Silva" />
+            <Filho nome="Carla" sobrenome="Silva" />
+        </Pai>
+    </div>
+, document.getElementById('root'));
